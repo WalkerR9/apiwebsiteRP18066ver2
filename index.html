@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejemplo web api</title>
+	<meta charset="utf-8"  />
+<LINK REL=StyleSheet HREF="estilo.css" TYPE="text/css" MEDIA=screen>
+<script src="codigo.js"></script>
+
+</head>
+
+<body >
+<div id="datos">
+	<h1>… Ejemplo web api</h1>
+    <p id="nombre">Walter Alcides Romero Portillo RP18066</p>
+</div>
+	<p><button onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button></p>
+	<div id="listado" style="display:none;">
+	<form name="filtroprods" id="filtroprods">
+		Seleccione Categorias 
+	<br>
+	<input type="checkbox" id="c1" value="c1" checked>Electronicos
+	<br>
+	<input type="checkbox" id="c2" value="c2" checked>Joyería
+	<br>
+    <input type="checkbox" id="c3" value="c3" checked>Ropa Caballero
+	<br>
+    <input type="checkbox" id="c4" value="c4" checked>Ropa Dama
+    <ol><li>Click en la imagen para Acercamiento</li>
+    <li>Click en precio para ordenar Asc o Desc</li></ol>
+
+	<p>INGRESE EL ID EN PRIMER LUGAR SI DESEA ELIMINAR</p>
+	<form>
+			<th><label for="id">ID de produto</label></th>
+			<th><input type="text" name="id_producto" id="idProd" size="30"></th>
+			<th><input type="button" value="buscar" onclick="buscarProd();"></th>
+		<br><br>
+		<table id="tabla_form">
+			<td>
+				<th><label for="Descripcion">Descripcion</label></th>
+				<th><input type="text" name="descripcion" id="iddescripcion" size="80" ></th>
+			</td>
+			<tr>
+				<td>
+					<th><label for="Precio">Precio</label></th>
+					<th> <input type="text" name="precio" id="idprecio" size="30" ></th>
+				</td>
+				<td>
+					<th><label for="Titulo">Titulo</label></th>
+					<th><input type="text" name="titulo" id="idtitulo" size="80" ></th>
+				</td>
+				
+			</tr>
+			<tr>
+				<td>
+					<th><label for="Imagen">Imagen</label></th>
+					<th> <input type="text" name="imagen" id="idimagen" size="50" ></th>
+				</td>
+				<td>
+					<th><label for="Categoria">Categoria</label></th>
+					<th> <input type="text" name="cat" id="idcat" size="50" ></th>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<th><br>
+						<input type="button" value="Agregar" onclick="agregarProducto()" >
+						
+						<input type="button" value="Eliminar" onclick="eliminarProd();">
+					</th>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<br>
+	</form>
+
+
+
+
+    <table id="tabla" border="1">
+	<thead id = "titulotabla">
+	<tr><th>id</th><th>foto</th><th  id="price">price</th>
+	<th>title</th><th>description</th><th>category</th></tr>
+	</thead>
+	<tbody id="tbody"></tbody>
+	</table>
+	</form>
+	</div>
+</body>
+</html>
